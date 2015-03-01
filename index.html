@@ -1,0 +1,15 @@
+<html>
+	<head>
+    <title>Jamazing To-do's</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="myTodos" ng-controller="MainCtrl">
+    <div>
+      {{test}}
+    </div>
+    <div ng-repeat="todo in todos | orderBy: '-priority'"">
+  		{{todo.title}} - priority {{todo.priority}}
+	</div>
+  </body>
+</html>
