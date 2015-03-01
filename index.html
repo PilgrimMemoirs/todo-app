@@ -8,8 +8,22 @@
     <div>
       {{test}}
     </div>
-    <div ng-repeat="todo in todos | orderBy: '-priority'"">
-  		{{todo.title}} - priority {{todo.priority}}
+    <div ng-repeat="todo in todos | orderBy: '-priority'">
+    	<span ng-click="incrementPriority(todo)"> ^ </span>
+  		<a ng-show="todo.link" href="{{todo.link}}">
+  			{{todo.title}} 
+  		</a>
+  		<span ng-hide="todo.link">
+  			{{todo.title}}
+  		</span>
+  		- priority {{todo.priority}}
 	</div>
+	<!-- <button ng-click="addTodo()">Add ToDo</button> -->
+	
+	<form ng-submit="addTodo()">
+		<input type="text" ng-model="title"></input>
+		<input type="text" ng-model="link"></input>
+		<button type="submit">Add ToDo</button>
+	</form>
   </body>
 </html>

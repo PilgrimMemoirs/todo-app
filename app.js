@@ -10,4 +10,18 @@ function($scope){
 	{title: "todo 4", priority: 5},
 	{title: "todo 5", priority: 1}
 ];
+	$scope.addTodo = function(){
+		if(!$scope.title || $scope.title === '') { return; }
+		$scope.todos.push({
+			title: $scope.title, 
+			link: $scope.link,
+			priority: 0
+		});
+		$scope.title = '';
+		$scope.link = '';
+	}
+
+	$scope.incrementPriority = function(todo) {
+		todo.priority += 1;
+	}
 }]);
