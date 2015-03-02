@@ -7,5 +7,5 @@ class ApplicationController < ActionController::Base
   	render 'layouts/application'
   end
 
-  root to: 'application#angular'
+  
 end
