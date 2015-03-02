@@ -1,4 +1,4 @@
-angular.module('myTodos', ['ui.router'])
+angular.module('myTodos', ['ui.router', 'templates'])
 .config([
 '$stateProvider',
 '$urlRouterProvider',
